@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import  Api
 from pageresource import Page, Pages, AddPage, PagesInit
-from db import db
 
 
 
@@ -11,9 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'Ilikepie'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+
 
 api.add_resource(Page, '/page/<string:id>')
 api.add_resource(Pages, '/pages')
