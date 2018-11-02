@@ -21,5 +21,5 @@ api.add_resource(PagesInit,'/pages/init')
 
 
 
-
-app.run()
+if __name__ == '__main__':
+    app.run()
