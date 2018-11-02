@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import  Api
 from pageresource import Page, Pages, AddPage, PagesInit
+from db import db
 
 
 
