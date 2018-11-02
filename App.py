@@ -10,7 +10,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'Ilikepie'
 api = Api(app)
 
-
+from db import db
+db.init_app(app)
 
 api.add_resource(Page, '/page/<string:id>')
 api.add_resource(Pages, '/pages')
@@ -19,7 +20,6 @@ api.add_resource(PagesInit,'/pages/init')
 
 
 
-if __name__ == '__main__':
-    from db import db
-    db.init_app(app)
-    app.run()
+
+
+app.run()
