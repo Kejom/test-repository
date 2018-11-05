@@ -1,6 +1,8 @@
 flask
 flask_restful
 flask_sqlalchemy
+flask_jwt
 requests
 bs4
 uwsgi
+psycopg2
